@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo - Desapego</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    
+  <h1>Catálogo</h1>
+  <button id="btnInicio">inicio</button>
+</header>
+<body>
+    <p style="text-align:center; opacity:0.7; margin-top:10px;">
+  Clique em um desapego para ver mais detalhes
+</p>
+<section class="catalogo">
+
+  <div class="card" onclick="abrirModal('Uno quadrado', 'Produto em ótimo estado!', 
+  ['imagens_uno/uno1.jpeg',
+  'imagens_uno/uno2.jpeg',
+  'imagens_uno/uno3.jpeg',
+  'imagens_uno/uno4.jpeg',
+  'imagens_uno/uno5.jpeg',
+  'imagens_uno/uno6.jpeg',
+  'imagens_uno/uno7.jpeg',])">
+    <img src="imagens_uno/uno1.jpeg">
+   
+    <h3> Uno quadrado</h3>
+    <p>Descrição curta</p>
+  </div>
+
+  <div class="card" onclick="abrirModal('Televisao LG', 'Pouco usado!', 
+  ['imagenstv/tv1.jpeg',
+  'imagenstv/tv2.jpeg',
+  'imagenstv/tv3.jpeg',
+  'imagenstv/tv4.jpeg',])">
+    <img src="imagenstv/tv1.jpeg">
+    <h3>Televisao LG</h3>
+    <p>Descrição curta</p>
+  </div>
+
+  <div class="card" onclick="abrirModal('Produto 3', 'Bem conservado!', 
+  ['imagens_lava/lava1.jpg',
+  'imagens_lava/lava2.jpg',
+  'imagens_lava/lava3.jpg',
+  'imagens_lava/lava4.jpg',
+  'imagens_lava/lava5.jpg',])">
+
+    <img src="imagens_lava/lava1.jpg">
+    <h3>Produto 3</h3>
+    <p>Descrição curta</p>
+  </div>
+
+  <div class="card" onclick="abrirModal('Produto 4', 'Sem detalhes!', 
+  ['https://via.placeholder.com/309',
+  'https://via.placeholder.com/310',
+  'https://via.placeholder.com/311'])">
+    <img src="https://via.placeholder.com/300">
+    <h3>Produto 4</h3>
+    <p>Descrição curta</p>
+  </div>
+
+</section>
+
+<!-- MODAL -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="fecharModal()">&times;</span>
+    <h2 id="titulo"></h2>
+    <p id="descricao"></p>
+
+    <div id="carousel-container" class="carousel">
+        
+    </div>
+
+    <a id="whatsapp" target="_blank" class="btn">Falar no WhatsApp</a>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
